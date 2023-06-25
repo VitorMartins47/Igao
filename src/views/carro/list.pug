@@ -5,6 +5,9 @@ html
         h1 Listagem de Carros
         a(href ='/carros/form') Formulario de Carros
 
+        ul Id
+            each carro in carros 
+                li=carro.id 
         ul Marca
             each carro in carros 
                 li=carro.Marca 
