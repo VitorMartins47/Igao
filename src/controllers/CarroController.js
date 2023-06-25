@@ -5,10 +5,9 @@ module.exports ={
         await Carro.create(req.body)
         return res.redirect('/carros')
     } ,
-    list:   (_,res)=> {
-        const carros = []
-        //carregar produtos
-        return res.render('carro/list')
+    list: async  (_,res)=> {
+        const carros = await Carro.findAll()
+        return res.render('carro/list',{carros})
     },
     form:   (_,res)=> res.render('carro/form'),
 }
