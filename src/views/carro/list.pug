@@ -1,0 +1,16 @@
+html
+    head    
+        title Listagem de Carros 
+    body 
+        h1 Listagem de Carros
+        a(href ='/carros/form') Formulario de Carros
+
+        ul Marca
+            each carro in carros 
+                li=carro.Marca 
+        ul Modelo
+            each carro in carros 
+                li=carro.Modelo
+        ul Valor
+            each carro in carros 
+                li=carro.Valor

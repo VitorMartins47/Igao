@@ -1,0 +1,19 @@
+html
+    head    
+        title Formulario de Carros 
+    body 
+        h1 Formulario de Carros
+
+        a(href ='/carros') Home
+        <br>
+        a(href ='/carros/list') Listagem de Carros 
+        <br>
+
+        form(action='/carros/create',method="post") 
+            lable Marca do Carro
+                input(name='Marca',requerid,type='text')
+            lable Modelo do Carro
+                input(name='Modelo',requerid,type='text')
+            lable Valor do Carro
+                input(name='Valor',requerid,type='text')
+            button(type="submit") Salvar
