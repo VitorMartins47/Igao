@@ -3,6 +3,7 @@ const path = require('path')
 //Controller
 const CarroController = require('./controllers/CarroController')
 const HomeController = require('./controllers/HomeController')
+const Carro = require('./models/Carro')
 //Serviço
 const app = express()
 app.listen(8000, () => {
@@ -18,3 +19,5 @@ app.get('/',HomeController.home)
 app.get('/carros', CarroController.list)
 app.get('/carros/form', CarroController.form)
 app.post('/carros/create',CarroController.create)
+
+//busca, delete, edit

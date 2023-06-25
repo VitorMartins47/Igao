@@ -10,4 +10,6 @@ module.exports ={
         return res.render('carro/list',{carros})
     },
     form:   (_,res)=> res.render('carro/form'),
+
+    
 }
