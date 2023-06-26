@@ -16,9 +16,9 @@ module.exports ={
         const body = req.body;
         const carros =  await Carro.findByPk(body.id);
         carros.update({
-            modelo: body.Modelo,
-            marca: body.Marca,
-            valor: body.Valor
+            Modelo: body.Modelo,
+            Marca: body.Marca,
+            Valor: body.Valor
         })
         carros.save()
         return res.redirect('/carros')
