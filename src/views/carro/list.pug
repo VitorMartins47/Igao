@@ -3,7 +3,9 @@ html
         title Listagem de Carros 
     body 
         h1 Listagem de Carros
-        a(href ='/carros/form') Formulario de Carros
+        <form action = "/carros/form" method = "get">
+            <button>Formulario de carros </button>
+        </form>
 
         ul Id
             each carro in carros 

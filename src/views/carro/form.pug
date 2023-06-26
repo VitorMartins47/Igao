@@ -4,9 +4,15 @@ html
     body 
         h1 Formulario de Carros
 
-        a(href ='/') Home
+        <form action = "/" method = "get">
+            <button>HOME</button>
+        </form>
+
         <br>
-        a(href ='/carros') Listagem de Carros 
+
+        <form action = "/carros" method = "get">
+            <button>Listagem de carros </button>
+        </form>
         <br>
 
         form(action='/carros/create',method="post") 
