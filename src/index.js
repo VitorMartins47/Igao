@@ -19,5 +19,8 @@ app.get('/',HomeController.home)
 app.get('/carros', CarroController.list)
 app.get('/carros/form', CarroController.form)
 app.post('/carros/create',CarroController.create)
-
 //busca, delete, edit
+app.get('/carros/formEditar/:id', CarroController.formEditar)
+app.post('/carros/editar', CarroController.editar)
+app.get('/carros/deletar/:id', CarroController.delete)
+

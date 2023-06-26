@@ -1,0 +1,23 @@
+html    
+    head      
+        title Editar Carros  
+    body        
+        h1 Formulario de Edicao 
+        
+        a(href = '/') Home <br>
+        a(href = '/carros') Lista de Carros <br><br>
+
+        form(action="/carros/editar", method = "post")
+            label id 
+                input(name = 'id', requerid, type="text", value=`${carro.id}`, readonly) 
+            <br> 
+            label Nome 
+                input(name = 'Modelo', requerid, type="text", value=`${carro.Modelo}`)
+            <br>
+            label Marca
+                input(name = 'Marca', requerid, type="text", value=`${carro.Marca}`) 
+            <br> 
+            label Valor 
+                input(name = 'Valor', requerid, type="text", value=`${carro.Valor}`)    
+            <br>
+            button(type='submit') Salvar 

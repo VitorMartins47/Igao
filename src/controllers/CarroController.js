@@ -2,7 +2,8 @@ const Carro = require('../models/Carro')
 
 module.exports ={
     create: async (req,res) =>{
-        await Carro.create(req.body)
+        const body =req.body;
+        await Carro.create(body)
         return res.redirect('/carros')
     } ,
     list: async  (_,res)=> {
@@ -11,7 +12,7 @@ module.exports ={
     },
     form:   (_,res)=> res.render('carro/form'),
 
-    edit: async(req, res) => {
+    editar: async(req, res) => {
         const body = req.body;
         const carros =  await Carro.findByPk(body.id);
         carros.update({
@@ -20,18 +21,18 @@ module.exports ={
             valor: body.Valor
         })
         carros.save()
-        return res.redirect('/carros/list')
+        return res.redirect('/carros')
     },
-    destroy: async(req, res) => {
+    delete: async(req, res) => {
         const id = req.params.id;
         Carro.destroy({
             where: {id: id}
         })
-        return res.redirect('/carros/list')
+        return res.redirect('/carros')
     },
-    formEdit: async(req, res) =>{
+    formEditar: async(req, res) =>{
         const carros = await Carro.findByPk(req.params.id);
-        return res.render('carro/formEdit', {carros})
+        return res.render('carro/formEditar', {carros})
     } 
 
     
